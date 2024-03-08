@@ -130,49 +130,5 @@ export default styles = StyleSheet.create({
         color: '#fdede0',
         fontFamily: 'Poppins-SemiBold',
         fontSize: 18
-    },
-    foodItemsView: {
-        marginHorizontal: 10,
-        marginVertical: 7,
-        borderWidth: 1,
-        borderColor: '#4c4d51',
-        borderRadius: 7,
-        width: 160,
-        height: 200,
-        backgroundColor: '#16171b',
-    },
-    imageStyle: {
-        alignSelf: 'center',
-        width: 100,
-        height: 100,
-        borderRadius: 60
-    },
-    heartIcon: {
-        alignSelf: 'flex-end',
-        marginRight: 15,
-        top: 10
-    },
-    foodNameView: {
-        color: 'white',
-        textAlign: 'center',
-        top: 10,
-        fontFamily: 'Poppins-SemiBold',
-        fontSize: 17
-    },
-    dollarText: {
-        color: 'white',
-        fontFamily: 'Poppins-SemiBold',
-        marginTop: 20,
-        marginLeft: 10
-    },
-    btnPlus: {
-        alignSelf: 'flex-end',
-        backgroundColor: '#fb6602',
-        borderRadius: 35,
-        bottom: 27,
-        marginRight: 10,
-        width: 25, height: 25,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
+    }
 });

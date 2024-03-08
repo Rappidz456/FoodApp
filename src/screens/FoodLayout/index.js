@@ -1,18 +1,17 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, Dimensions, FlatList, Pressable, ScrollView } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image, Dimensions, FlatList, Pressable, ScrollView, SafeAreaView } from 'react-native';
 import styles from './styles';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import Octicons from 'react-native-vector-icons/Octicons'
 import LinearGradient from 'react-native-linear-gradient';
 import Foundation from 'react-native-vector-icons/Foundation'
+import { VirtualizedList } from 'react-native';
+import { KeyboardAvoidingView } from 'react-native';
 
 const MyComponent = ({navigation}) => {
 
     const { width, height } = Dimensions.get('window');
-    // const objects = foodObjects.length > 2
-
-
 
     const foodObjects = [
         {
@@ -47,7 +46,6 @@ const MyComponent = ({navigation}) => {
             <View style={styles.foodItemsView}>
                 <Pressable onPress={() => {
                     navigation.navigate('FoodOrder', {
-                        Id: item.id,
                         name : item.label,
                         amount : item.dollar,
                         picture : item.image
@@ -88,12 +86,12 @@ const MyComponent = ({navigation}) => {
             <View>
                 <Text style={styles.popularView}>Popular Food</Text>
             </View>
-            <View style={styles.flatelist}>
-                    <FlatList renderItem={render}
+            <SafeAreaView style={styles.flatelist}>
+                <FlatList renderItem={render}
                     data={foodObjects}
                     keyExtractor={item => item.id}
-                    numColumns={2}/>    
-            </View> 
+                    numColumns={2}/>              
+            </SafeAreaView> 
             </LinearGradient>
             </View>
         </View>
