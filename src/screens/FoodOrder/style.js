@@ -1,12 +1,14 @@
 import { StyleSheet } from "react-native";
+import {responsiveHeight as height, responsiveWidth as width} from 'react-native-responsive-dimensions'
+import { horizontalScale, verticalScale } from "../../utils/ScaleSize";
 
 export default styles = StyleSheet.create({
     container: {
         flex: 1,
     },
     tvscreenMain: {
-        width: '100%',
-        height: 250,
+        width: width(102),
+        height: height(30),
         borderBottomLeftRadius: 160,
         borderBottomRightRadius: 160,
         alignSelf: 'center',
@@ -21,7 +23,7 @@ export default styles = StyleSheet.create({
         elevation: 5,
     },
     headerFoodView: {
-        marginVertical: 14,
+        marginVertical: verticalScale(20),
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -32,7 +34,7 @@ export default styles = StyleSheet.create({
         letterSpacing: 1
     },
     amountView: {
-        marginVertical: 15,
+        marginVertical: verticalScale(20),
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -48,22 +50,23 @@ export default styles = StyleSheet.create({
     },
     imageFood: {
         borderRadius: 120,
-        height: 235,
+        height: height(25),
+        width: width(45)
     },
     incrementView: {
         flexDirection: 'row'
     },
     buttonFlex: {
         flexDirection: 'row',
-        marginVertical: 40,
+        marginVertical: verticalScale(50),
         borderWidth: 2,
-        width: 120,
+        width: width(30),
         alignSelf: 'center',
         borderColor: '#444648',
         borderRadius: 9
     },
     buttonView: {
-        width: 40,
+        width: width(10),
         borderColor: 'white',
         borderWidth: 1,
         borderLeftWidth: 0,
@@ -103,7 +106,7 @@ export default styles = StyleSheet.create({
         fontFamily: 'Poppins-SemiBold'
     },
     marginText2: {
-        marginHorizontal: 45,
+        marginHorizontal: horizontalScale(30),
         color: 'white',
         fontSize: 16,
         fontFamily: 'Poppins-SemiBold'
@@ -116,11 +119,11 @@ export default styles = StyleSheet.create({
     AddButtonView: {
         alignItems: 'center',
         justifyContent: 'center',
-        marginVertical: 50,
+        marginVertical: verticalScale(50),
     },
     AddFood: {
-        width: 160,
-        height: 45,
+        width: width(45),
+        height: height(6),
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#ff6600',
