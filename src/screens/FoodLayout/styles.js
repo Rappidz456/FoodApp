@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     fontIcon: {
         height: hp('3%'), 
         width: wp('14%'), 
-        marginHorizontal: horizontalScale(130)
+        marginHorizontal: horizontalScale(150)
     },
     inputView: {
         flexDirection: 'row',
