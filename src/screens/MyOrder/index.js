@@ -28,7 +28,8 @@ const OrderPlace = () => {
     const ItemTotal = [
         {
             id: 1,
-            total: 'Item Total'
+            total: 'Item Total',
+            amount: '$90'
         },
         {
             id: 2,
@@ -36,6 +37,10 @@ const OrderPlace = () => {
         },
         {
             id: 3,
+            discount: 'Offer Discount'
+        },
+        {
+            id: 4,
             cost: 'Total'
         }
     ]
@@ -54,6 +59,7 @@ const OrderPlace = () => {
             <View style = {styles.priceTextView}>
                 <Text style = {styles.priceText1}>{item.total}</Text>
                 <Text style = {styles.priceText1}>{item.deliver}</Text>
+                <Text style = {styles.discountStyle}>{item.discount}</Text>
                 <Text style = {styles.priceText1}>{item.cost}</Text>
             </View>
         )
@@ -61,7 +67,6 @@ const OrderPlace = () => {
 
     const Separator = () => <View style={styles.itemSeparator} />;
 
-    
     const ListItem = ({item}) => (
         <Swipeable renderRightActions={rightSwipeActions}>
             <View style = {styles.itemContainer}>

@@ -1,16 +1,17 @@
 import { StyleSheet } from "react-native";
-import {responsiveHeight as height, responsiveWidth as width} from 'react-native-responsive-dimensions'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'
 import { horizontalScale, verticalScale } from "../../utils/ScaleSize";
+import {responsiveHeight as height, responsiveScreenWidth as width} from 'react-native-responsive-dimensions'
 
 export default styles = StyleSheet.create({
     container: {
         flex: 1,
     },
     tvscreenMain: {
-        width: width(102),
-        height: height(30),
-        borderBottomLeftRadius: 160,
-        borderBottomRightRadius: 160,
+        width: wp('100%'),
+        height: hp('30%'),
+        borderBottomLeftRadius: 170,
+        borderBottomRightRadius: 170,
         alignSelf: 'center',
         backgroundColor: "#353a40",
         shadowColor: 'black',
@@ -23,7 +24,7 @@ export default styles = StyleSheet.create({
         elevation: 5,
     },
     headerFoodView: {
-        marginVertical: verticalScale(20),
+        top: verticalScale(17),
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -34,7 +35,7 @@ export default styles = StyleSheet.create({
         letterSpacing: 1
     },
     amountView: {
-        marginVertical: verticalScale(20),
+        top: verticalScale(35),
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -45,6 +46,7 @@ export default styles = StyleSheet.create({
         letterSpacing: 1
     },
     imageView: {
+        top: verticalScale(50),
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -54,11 +56,12 @@ export default styles = StyleSheet.create({
         width: width(45)
     },
     incrementView: {
+        top: verticalScale(10),
         flexDirection: 'row'
     },
     buttonFlex: {
         flexDirection: 'row',
-        marginVertical: verticalScale(50),
+        top: verticalScale(80),
         borderWidth: 2,
         width: width(30),
         alignSelf: 'center',
@@ -96,34 +99,35 @@ export default styles = StyleSheet.create({
         color: 'white'
     },
     flexText: {
+        marginTop: verticalScale(120),
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
     },
     marginText1: {
         color: 'white',
-        fontSize: 16,
-        fontFamily: 'Poppins-SemiBold'
+        fontSize: 15,
+        fontFamily: 'Poppins-Regular'
     },
     marginText2: {
         marginHorizontal: horizontalScale(30),
         color: 'white',
-        fontSize: 16,
-        fontFamily: 'Poppins-SemiBold'
+        fontSize: 15,
+        fontFamily: 'Poppins-Regular'
     },
     marginText3: {
         color: 'white',
-        fontSize: 16,
-        fontFamily: 'Poppins-SemiBold'
+        fontSize: 15,
+        fontFamily: 'Poppins-Regular'
     },
     AddButtonView: {
         alignItems: 'center',
         justifyContent: 'center',
-        marginVertical: verticalScale(50),
+        top: verticalScale(40)
     },
     AddFood: {
-        width: width(45),
-        height: height(6),
+        width: width(40),
+        height: height(6.5),
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#ff6600',
@@ -131,7 +135,42 @@ export default styles = StyleSheet.create({
     },
     cartText: {
         color: '#fdede0',
-        fontFamily: 'Poppins-SemiBold',
+        fontFamily: 'Poppins-Medium',
         fontSize: 18
-    }
+    },
+    foodItemsView: {
+        marginHorizontal: horizontalScale(20),
+        marginVertical: verticalScale(110),
+        borderWidth: 1,
+        borderColor: '#515558',
+        borderRadius: 7,
+        width: wp('24.5%'),
+        height: hp('17%'),
+        backgroundColor: '#353a40',
+    },
+    imageStyle: {
+        alignSelf: 'center',
+        bottom: verticalScale(40),
+        width: wp('17%'),
+        height: hp('10%'),
+        borderRadius: 60
+    },
+    heartIcon: {
+        alignSelf: 'flex-end',
+        bottom: horizontalScale(17),
+        marginRight: horizontalScale(10),
+    },
+    foodNameView: {
+        color: 'white',
+        bottom: verticalScale(24),
+        fontFamily: 'Poppins-Regular',
+        fontSize: 11,
+        marginLeft: horizontalScale(10)
+    },
+    dollarText: {
+        color: 'white',
+        fontFamily: 'Poppins-Medium',
+        bottom: verticalScale(15),
+        marginLeft: horizontalScale(10)
+    },
 });

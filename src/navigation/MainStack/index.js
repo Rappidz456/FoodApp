@@ -31,7 +31,7 @@ const AppWrapper = () => {
                     headerTitleAlign: 'center',
                     headerTitleStyle: {
                         color: 'white',
-                        fontFamily: 'Poppins-Bold',
+                        fontFamily: 'Poppins-Regular',
                         fontSize: 25
                     }
                 }}/>    

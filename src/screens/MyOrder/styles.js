@@ -1,13 +1,14 @@
-import {StyleSheet} from 'react-native'
-import {heightPercentageToDP as hp, widthPercentageToDP as wp} from 'react-native-responsive-screen'
+import { StyleSheet } from 'react-native'
+import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen'
 import { verticalScale, horizontalScale } from '../../utils/ScaleSize';
 
 export default styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    itemSeparator:{
+    itemSeparator: {
         height: 0.6,
+        width: wp('74%'),
         backgroundColor: 'grey'
     },
     itemContainer: {
@@ -16,7 +17,7 @@ export default styles = StyleSheet.create({
         backgroundColor: '#16171b',
         borderColor: 'grey',
         borderWidth: 1,
-        width: wp('78%'),
+        width: wp('80%'),
         height: hp('12%'),
         alignSelf: 'center',
         borderRadius: 10
@@ -30,11 +31,15 @@ export default styles = StyleSheet.create({
         gap: -18,
         marginVertical: verticalScale(14),
     },
-    priceText1:{
+    priceText1: {
         fontFamily: 'Poppins-Light',
         color: 'white'
     },
-    flexStyle : {
+    discountStyle: {
+        fontFamily: 'Poppins-Light',
+        color: 'white'
+    },
+    flexStyle: {
         flexDirection: 'column',
         marginHorizontal: horizontalScale(25),
     },
@@ -49,20 +54,20 @@ export default styles = StyleSheet.create({
         color: 'white',
         fontSize: 17,
         marginVertical: verticalScale(7),
-        fontFamily: 'Poppins-Bold'
+        fontFamily: 'Poppins-Medium'
     },
     itemStyle2: {
         color: 'white',
         fontSize: 17,
         marginVertical: verticalScale(10),
-        fontFamily: 'Poppins-Bold'
-    },  
+        fontFamily: 'Poppins-Medium'
+    },
     bottomSheet: {
         alignItems: 'flex-end',
         justifyContent: 'center',
         alignSelf: 'center',
-        borderTopLeftRadius : 35,
-        borderTopRightRadius : 35,
+        borderTopLeftRadius: 35,
+        borderTopRightRadius: 35,
         height: hp('40%'),
         width: wp('84%'),
         backgroundColor: '#353a40',

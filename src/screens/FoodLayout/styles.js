@@ -10,16 +10,17 @@ const styles = StyleSheet.create({
         flexDirection: 'row', 
         alignItems: 'center', 
         justifyContent: 'center', 
-        top: verticalScale(27)
+        top: verticalScale(27),
+        marginLeft: horizontalScale(15)
     },
     fontIcon: {
         height: hp('3%'), 
         width: wp('14%'), 
-        marginHorizontal: horizontalScale(150)
+        marginHorizontal: horizontalScale(130)
     },
     inputView: {
         flexDirection: 'row',
-        marginVertical: verticalScale(80),
+        marginVertical: verticalScale(60),
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
         borderRadius: 6,
         width: wp('68%'),
         fontFamily: 'Poppins-Light',
-        height: hp('6.9%')
+        height: hp('6.5%')
     },
     buttonView: {
         alignItems: 'center',
@@ -41,37 +42,36 @@ const styles = StyleSheet.create({
         backgroundColor: '#fb6602',
         borderRadius: 6,
         width: wp('12%'),
-        height: hp('7%')
+        height: hp('6.5%')
     },
     textView: {
         color: 'white',
-        fontFamily: 'Poppins-SemiBold',
+        fontFamily: 'Poppins-Regular',
         fontSize: 22,
-        marginLeft: horizontalScale(35),
+        marginLeft: horizontalScale(30),
         top: verticalScale(50)
     },
     popularView: {
         color: 'white',
-        fontFamily: 'Poppins-SemiBold',
-        fontSize: 20,
+        fontFamily: 'Poppins-Regular',
+        fontSize: 18,
         marginLeft: horizontalScale(35),
         bottom: verticalScale(42)
     },
     foodItemsView: {
-        marginHorizontal: horizontalScale(15),
+        marginHorizontal: horizontalScale(20),
         marginVertical: verticalScale(8),
-        marginBottom: verticalScale(10),
         borderWidth: 1,
-        borderColor: '#4c4d51',
+        borderColor: '#27282d',
         borderRadius: 7,
-        width: wp('39%'),
-        height: hp('28%'),
+        width: wp('37%'),
+        height: hp('25%'),
         backgroundColor: '#16171b',
     },
     imageStyle: {
         alignSelf: 'center',
-        width: wp('24%'),
-        height: hp('14%'),
+        width: wp('18%'),
+        height: hp('10%'),
         borderRadius: 60
     },
     heartIcon: {
@@ -82,29 +82,29 @@ const styles = StyleSheet.create({
     foodNameView: {
         color: 'white',
         textAlign: 'center',
-        top: verticalScale(15),
-        fontFamily: 'Poppins-SemiBold',
-        fontSize: 17
+        top: verticalScale(20),
+        fontFamily: 'Poppins-Regular',
+        fontSize: 15
     },
     dollarText: {
         color: 'white',
-        fontFamily: 'Poppins-SemiBold',
-        marginTop: verticalScale(25),
+        fontFamily: 'Poppins-Medium',
+        marginTop: verticalScale(35),
         marginLeft: horizontalScale(14)
     },
     btnPlus: {
         alignSelf: 'flex-end',
         backgroundColor: '#fb6602',
         borderRadius: 35,
-        bottom: horizontalScale(27),
+        bottom: horizontalScale(26),
         marginRight: horizontalScale(13),
-        width: wp('6%'), 
-        height: hp('3.6%'),
+        width: wp('5%'), 
+        height: hp('3%'),
         alignItems: 'center',
         justifyContent: 'center'
     },
     flatelist: {
-        bottom: verticalScale(27),
+        bottom: verticalScale(34),
         alignItems: 'center', 
         justifyContent: 'center', 
     }
