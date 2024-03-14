@@ -29,9 +29,6 @@ const MyTabs = () => {
       case 'Heart':
         icon = 'heart'
         break;
-      case 'Profile':
-        icon = 'account-outline'
-        break;
     }
 
     return (
@@ -91,11 +88,6 @@ const MyTabs = () => {
         <CurvedBottomBar.Screen
           name="Heart"
           component={() => <Heart />}
-          position='RIGHT'
-        />
-        <CurvedBottomBar.Screen
-          name="Profile"
-          component={() => <Profile />}
           position='RIGHT'
         />
       </CurvedBottomBar.Navigator>
