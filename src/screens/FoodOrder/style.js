@@ -123,7 +123,7 @@ export default styles = StyleSheet.create({
     AddButtonView: {
         alignItems: 'center',
         justifyContent: 'center',
-        top: verticalScale(40)
+        marginTop: verticalScale(50)
     },
     AddFood: {
         width: width(40),
@@ -140,7 +140,7 @@ export default styles = StyleSheet.create({
     },
     foodItemsView: {
         marginHorizontal: horizontalScale(20),
-        marginVertical: verticalScale(110),
+        marginVertical: verticalScale(60),
         borderWidth: 1,
         borderColor: '#515558',
         borderRadius: 7,
