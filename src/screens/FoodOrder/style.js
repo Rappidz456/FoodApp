@@ -105,18 +105,18 @@ export default styles = StyleSheet.create({
         justifyContent: 'center',
     },
     marginText1: {
-        color: 'white',
+        color: '#cdcdd0',
         fontSize: 15,
         fontFamily: 'Poppins-Regular'
     },
     marginText2: {
         marginHorizontal: horizontalScale(30),
-        color: 'white',
+        color: '#cdcdd0',
         fontSize: 15,
         fontFamily: 'Poppins-Regular'
     },
     marginText3: {
-        color: 'white',
+        color: '#cdcdd0',
         fontSize: 15,
         fontFamily: 'Poppins-Regular'
     },

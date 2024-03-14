@@ -1,12 +1,12 @@
 import { View, Animated, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import MyComponent from '../../screens/FoodLayout';
 import Feather from 'react-native-vector-icons/Feather'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import { CurvedBottomBar } from 'react-native-curved-bottom-bar';
 
+import MyComponent from '../../screens/FoodLayout';
 import Profile from '../../screens/Profile';
 import Heart from '../../screens/Heart';
 import Cart from '../../screens/Cart';
@@ -26,13 +26,19 @@ const MyTabs = () => {
       case 'Cart':
         icon = 'shopping-cart';
         break;
+      case 'Heart':
+        icon = 'heart'
+        break;
+      case 'Profile':
+        icon = 'account-outline'
+        break;
     }
 
     return (
       <>
-      <Feather name={icon} size={20} color={'white'} />
+        <Feather name={icon} size={20} color={'white'} />
       </>
-      );
+    );
   };
   const renderTabBar = ({ routeName, selectedTab, navigate }) => {
     return (
@@ -48,10 +54,10 @@ const MyTabs = () => {
   // const Tab = createBottomTabNavigator();
   return (
     <>
-    <CurvedBottomBar.Navigator
-    screenOptions={() => ({
-      headerShown: false,
-    })}
+      <CurvedBottomBar.Navigator
+        screenOptions={() => ({
+          headerShown: false,
+        })}
         type='DOWN'
         style={styles.bottomBar}
         shadowStyle={styles.shawdow}
@@ -65,7 +71,7 @@ const MyTabs = () => {
               style={styles.button}
               onPress={() => Alert.alert('Click Action')}
             >
-              <FontAwesome6 name='plus' color={'white'} size={25}/>
+              <FontAwesome6 name='plus' color={'white'} size={25} />
             </TouchableOpacity>
 
           </Animated.View>
@@ -81,6 +87,16 @@ const MyTabs = () => {
           name="Cart"
           component={() => <Cart />}
           position="LEFT"
+        />
+        <CurvedBottomBar.Screen
+          name="Heart"
+          component={() => <Heart />}
+          position='RIGHT'
+        />
+        <CurvedBottomBar.Screen
+          name="Profile"
+          component={() => <Profile />}
+          position='RIGHT'
         />
       </CurvedBottomBar.Navigator>
       {/* <Tab.Navigator screenOptions={() => ({
