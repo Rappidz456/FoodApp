@@ -4,7 +4,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import { Swipeable } from 'react-native-gesture-handler';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import styles from './styles';
-import { verticalScale } from '../../utils/ScaleSize';
+import { horizontalScale, verticalScale } from '../../utils/ScaleSize';
 
 const OrderPlace = () => {
     const data = [
@@ -34,14 +34,17 @@ const OrderPlace = () => {
         {
             id: 2,
             deliver: 'Delivery Charges',
+            charges: '$10'
         },
         {
             id: 3,
-            discount: 'Offer Discount'
+            discount: 'Offer Discount',
+            discountcharges: '$20'
         },
         {
             id: 4,
-            cost: 'Total'
+            cost: 'Total',
+            payment: '$120'
         }
     ]
 
@@ -57,10 +60,22 @@ const OrderPlace = () => {
       const listPrice = ({item}) => {
         return(
             <View style = {styles.priceTextView}>
+                <View style = {{flexDirection: 'row'}}>
                 <Text style = {styles.priceText1}>{item.total}</Text>
+                <Text style = {styles.chargesStyle}>{item.amount}</Text>
+                </View>
+                <View style = {{flexDirection: 'row'}}>
                 <Text style = {styles.priceText1}>{item.deliver}</Text>
+                <Text style = {styles.discountcharges}>{item.charges}</Text>
+                </View>
+                <View style = {{flexDirection: 'row'}}>
                 <Text style = {styles.discountStyle}>{item.discount}</Text>
+                <Text style = {styles.discountpay}>{item.discountcharges}</Text>
+                </View>
+                <View style = {{flexDirection: 'row'}}>
                 <Text style = {styles.priceText1}>{item.cost}</Text>
+                <Text style = {styles.totalcost}>{item.payment}</Text>
+                </View>
             </View>
         )
       }
@@ -74,6 +89,15 @@ const OrderPlace = () => {
                     <View style = {styles.flexStyle}>
                         <Text style = {styles.itemStyle}>{item.name}</Text>
                         <Text style = {styles.itemStyle2}>{item.price}</Text>
+                    </View>
+                    <View style = {styles.increment}>
+                        <TouchableOpacity>
+                            <Text style = {styles.incrementStyle1}>-</Text>
+                        </TouchableOpacity>
+                        <Text style = {styles.numberStyle}>1</Text>
+                        <TouchableOpacity>
+                            <Text style = {styles.incrementStyle2}>+</Text>
+                        </TouchableOpacity>
                     </View>
                 </View>
         </Swipeable>

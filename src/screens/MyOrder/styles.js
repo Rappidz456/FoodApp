@@ -7,7 +7,7 @@ export default styles = StyleSheet.create({
         flex: 1,
     },
     itemSeparator: {
-        height: 0.6,
+        height: 1,
         width: wp('74%'),
         backgroundColor: 'grey'
     },
@@ -22,18 +22,53 @@ export default styles = StyleSheet.create({
         alignSelf: 'center',
         borderRadius: 10
     },
+    increment: {
+        borderWidth: 2,
+        height: hp('10%'),
+        borderColor: '#38373a',
+        width: wp('6%'),
+        marginLeft: horizontalScale(105),
+        borderRadius: 5,
+        marginTop: verticalScale(7)
+    },
+    incrementStyle1: {
+        color: '#7f7f7f',
+        textAlign: 'center',
+        fontSize: 15,
+        borderWidth: 2,
+        borderTopWidth: 0,
+        borderColor: '#38373a',
+        borderLeftWidth: 0,
+        borderRightWidth: 0
+    },
+    numberStyle: {
+        color: 'white',
+        textAlign: 'center',
+        fontSize: 15
+    },
+    incrementStyle2: {
+        color: '#7f7f7f',
+        textAlign: 'center',
+        fontSize: 20,
+        borderWidth: 2,
+        borderTopWidth: 1,
+        borderBottomWidth: 0,
+        borderRightWidth: 0,
+        borderLeftWidth: 0,
+        borderColor: '#38373a'
+    },
     priceContainer: {
         alignSelf: 'flex-start',
         marginLeft: horizontalScale(20),
-        top: 30
+        top: verticalScale(40)
     },
     priceTextView: {
-        gap: -18,
-        marginVertical: verticalScale(14),
+        gap: -20,
+        marginVertical: verticalScale(11),
     },
     priceText1: {
         fontFamily: 'Poppins-Light',
-        color: 'white'
+        color: 'white',
     },
     discountStyle: {
         fontFamily: 'Poppins-Light',
@@ -54,13 +89,13 @@ export default styles = StyleSheet.create({
         color: 'white',
         fontSize: 17,
         marginVertical: verticalScale(7),
-        fontFamily: 'Poppins-Medium'
+        fontFamily: 'Poppins-Bold'
     },
     itemStyle2: {
         color: 'white',
         fontSize: 17,
         marginVertical: verticalScale(10),
-        fontFamily: 'Poppins-Medium'
+        fontFamily: 'Poppins-Bold'
     },
     bottomSheet: {
         alignItems: 'flex-end',
@@ -101,5 +136,25 @@ export default styles = StyleSheet.create({
         justifyContent: 'center',
         borderTopLeftRadius: 10,
         borderBottomLeftRadius: 10,
+    },
+    chargesStyle: {
+        marginLeft: horizontalScale(205), 
+        color: 'white', 
+        fontFamily: 'Poppins-SemiBold'
+    },
+    discountcharges: {
+        marginLeft: horizontalScale(157), 
+        color: 'white', 
+        fontFamily: 'Poppins-SemiBold',
+    },
+    discountpay: {
+        marginLeft: horizontalScale(177), 
+        color: 'white', 
+        fontFamily: 'Poppins-SemiBold',
+    },
+    totalcost: {
+        color: 'white',
+        fontFamily: 'Poppins-SemiBold',
+        marginLeft: horizontalScale(245)
     }
 });
